@@ -1,0 +1,13 @@
+sudo: required
+
+language: C++
+
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install libgles2-mesa-dev
+  - sudo apt-get install software-properties-common
+  - sudo add-apt-repository ppa:george-edison55/cmake-3.x
+  - sudo apt-get update
+  - sudo apt-get install cmake
+
+script: mkdir build && cd build && cmake ../ && make
